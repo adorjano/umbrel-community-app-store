@@ -5,10 +5,10 @@ services:
   app_proxy:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
+      APP_HOST: bitsperity-bitspark_server_1
       APP_PORT: 5186
 
-  web:
+  server:
     image: rafiki71/bitspark:v0.1
     restart: on-failure
     stop_grace_period: 1m
