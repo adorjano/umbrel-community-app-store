@@ -8,7 +8,9 @@ services:
       APP_HOST: sparkles-hello-world_server_1
       APP_PORT: 3000
 
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+  web:
+    image: rafiki71/bitspark:v0.1
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - 5000
